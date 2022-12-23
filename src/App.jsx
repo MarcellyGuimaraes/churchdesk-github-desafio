@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col font-mono">
+    <div className="flex flex-col font-mono bg-slate-100">
       <h1 className="m-8 text-2xl text-center font-bold">
         Lista de usuários GitHub
       </h1>
@@ -45,7 +45,7 @@ function App() {
         <div className="w-full mb-8 overflow-x-auto md:overflow-hidden  rounded-lg shadow-lg">
           <table className="w-full">
             <thead>
-              <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+              <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-slate-300 uppercase border-b border-gray-600">
                 <th className="px-4 py-3">Nome</th>
                 <th className="px-4 py-3">Followers</th>
                 <th className="px-4 py-3">Following</th>
@@ -55,7 +55,7 @@ function App() {
             </thead>
             <tbody className="bg-white">
               {users.map((user) => (
-                <tr className="text-gray-700 hover:bg-slate-100" key={user.id}>
+                <tr className="text-gray-700 hover:bg-slate-200" key={user.id}>
                   <td className="px-4 py-3 border">
                     <div className="flex items-center text-sm">
                       <div className="relative w-8 h-8 mr-3 rounded-full md:block">
