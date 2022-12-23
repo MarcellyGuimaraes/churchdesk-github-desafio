@@ -21,14 +21,14 @@ function App() {
   }
 
   return (
-    <div>
-      <div>
+    <div className="flex flex-col font-mono">
+      <h1 className="m-8 text-2xl text-center font-bold">
+        Lista de usuários GitHub
+      </h1>
+      <div className="flex flex-col justify-center md:flex-row">
         <input
           type="search"
-          className={`w-full px-3 py-1.5 text-gray-700
-          bg-white border-2 border-solid border-gray-300 rounded
-          transition ease-in-out focus:text-gray-700 mb-2
-          focus:bg-white md:w-3/6 md:h-12`}
+          className={`mx-14 block border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 md:m-0`}
           placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -36,7 +36,7 @@ function App() {
         />
         <button
           onClick={handleSearch}
-          className="mx-14 mt-3 bg-zinc-400 p-3 text-white md:m-0 md:p-0"
+          className="mx-14 mt-3 bg-slate-600 p-3 text-white hover:bg-slate-800 md:m-0 md:px-4"
         >
           pesquisar
         </button>
@@ -55,7 +55,7 @@ function App() {
             </thead>
             <tbody className="bg-white">
               {users.map((user) => (
-                <tr className="text-gray-700">
+                <tr className="text-gray-700 hover:bg-slate-100" key={user.id}>
                   <td className="px-4 py-3 border">
                     <div className="flex items-center text-sm">
                       <div className="relative w-8 h-8 mr-3 rounded-full md:block">
@@ -76,13 +76,13 @@ function App() {
                     </div>
                   </td>
                   <td className="px-4 py-3 text-ms font-semibold border">
-                    {user.followers_url.length}
+                    {user.followers_url.length} Seguidores
                   </td>
                   <td className="px-4 py-3 text-ms font-semibold border">
-                    {user.following_url.length}
+                    {user.following_url.length} Seguindo
                   </td>
                   <td className="px-4 py-3 text-ms font-semibold border">
-                    {user.repos_url.length}
+                    {user.repos_url.length} Repositórios
                   </td>
                   <td className="px-4 py-3 text-xs border">
                     <a
