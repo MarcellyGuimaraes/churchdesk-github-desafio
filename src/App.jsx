@@ -88,7 +88,7 @@ function App() {
                     <a
                       href={user.html_url}
                       target="_blank"
-                      className="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"
+                      className="px-2 py-1 font-semibold leading-tight text-zinc-700 hover:text-zinc-900 bg-zinc-100 hover:bg-gray-300 rounded-sm "
                     >
                       {' '}
                       Ver conta{' '}
